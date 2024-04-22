@@ -5,15 +5,11 @@ public class GussingGame {
         int num = 5;
         int i = 0;
         Scanner st = new Scanner(System.in);
-        String inputNumber = "";
+        int inputNumber;
         do {
-            System.out.println("Enter a Password: ");
-            inputNumber = st.nextLine();
-            System.out.println("Pasword is" + (numCheck(inputNumber) ? " correct": " wrong"));
-            i++;
-        } while (!numCheck(inputNumber));
-    }
-    public static boolean numCheck(String inputNumber) {
-        return inputNumber.length() > 6;
+            System.out.println("Guess the Number: ");
+            inputNumber = st.nextInt();
+            System.out.println("Your Guessing Number is "+ (num == inputNumber?" correct":" Wrong"));
+        } while (num != inputNumber);
     }
 }
