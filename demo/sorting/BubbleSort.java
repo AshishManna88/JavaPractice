@@ -60,6 +60,6 @@ public class BubbleSort {
                 }
             }
         }
-        return newArray;
+        return newArray; 
     } 
 }
