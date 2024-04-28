@@ -1,5 +1,4 @@
 package demo.sorting;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class BubbleSort {
@@ -39,27 +38,27 @@ public class BubbleSort {
             }
         }
 
-        boolean first = true;
-        for (int i : newArray) {
-            if (!first) {
-                System.out.print(",");
-            } else {
-                first = false;
-            }
-            System.out.print(i);
-        }
+        // boolean first = true;
+        // for (int i : newArray) {
+        //     if (!first) {
+        //         System.out.print(",");
+        //     } else {
+        //         first = false;
+        //     }
+        //     System.out.print(i);
+        // }
     }
 
     static int[] sortArray(int[] newArray){
         for (int i = 0; i < newArray.length-1; i++) {
             for (int j = i+1; j < newArray.length; j++) {
                 if(newArray[i] > newArray[j]){
-                    newArray[i] = newArray[i] + newArray[j]; //a = a+b; a=10, b=20
+                    newArray[i] = newArray[i] + newArray[j]; //a = a+b a=10, b=20
                     newArray[j] = newArray[i] - newArray[j]; //b = a-b 30-20
-                    newArray[i] = newArray[i] - newArray[j]; //a = a - b 30-10
+                    newArray[i] = newArray[i] - newArray[j]; //a = a-b 30-10
                 }
             }
         }
-        return newArray; 
+        return newArray;
     } 
 }
